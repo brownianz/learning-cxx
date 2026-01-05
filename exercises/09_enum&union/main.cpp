@@ -37,8 +37,8 @@ ColorEnum convert_by_pun(Color c) {
 
     TypePun pun;
     // TODO: 补全类型双关转换
-
-    return pun.e;
+    pun.c = c;      // 把 Color 写入 union
+    return pun.e;   // 再从同一内存按 ColorEnum 读出
 }
 
 int main(int argc, char **argv) {

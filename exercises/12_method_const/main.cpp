@@ -5,7 +5,11 @@
 struct Fibonacci {
     int numbers[11];
     // TODO: 修改方法签名和实现，使测试通过
-    int get(int i) {
+    // int get(int i) {
+    // }
+    // FIB 被声明成了 constexpr 对象，因此它是 const 对象，只能调用 const 成员函数。
+    int get(int i) const {
+        return numbers[i];
     }
 };
 
